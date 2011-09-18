@@ -21,7 +21,7 @@ $list_params = array(
 	$options = array(
 		'subtypes'=>'wikiactivity',
 		'action_type'=>'create',
-		'limit'      => 5,
+		'limit'      => 8,
 		'list_class' => 'elgg-river',
 		'pagination' => FALSE,
 		'full_view' => false,
@@ -37,8 +37,11 @@ $list_params = array(
 	
 	$options['count'] = $count;
 	$options['items'] = $items;
-
+	
+	elgg_pop_context();
 	$activity = elgg_view('page/components/list', $options);
+	elgg_push_context('widgets');
+	
 
 //grab the latest 4 blog posts
 $list_params['subtype'] = 'blog';

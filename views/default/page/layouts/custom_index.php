@@ -57,7 +57,7 @@ echo elgg_view("index/righthandside");
 */
 // files
 if (elgg_is_active_plugin('bookmarks')) {
-	echo elgg_view_module('featured',  elgg_echo("custom:bookmarks"), $vars['bookmarks']);
+	echo elgg_view_module('featured',  "Latest wiki activity", $vars['bookmarks']);
 }
 ?>
 		</div>
